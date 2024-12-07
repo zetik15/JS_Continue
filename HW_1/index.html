@@ -7,7 +7,7 @@
 </head>
 
 <body>
-    <a href="#" class="card-link">Card link</a>
+    <!-- <a href="#" class="card-link">Card link</a>
     <a href="#" class="card-link">Another link</a>
     <div class="card" style="width: 18rem;">
         <div class="card-body">
@@ -23,30 +23,101 @@
             <a href="#" class="card-link" data-number="50">Another
                 link</a>
         </div>
-    </div>
+    </div> -->
 
+
+
+    <div class="shop-item">
+        <h3 class="item-name" data-category="electronics">Laptop Pro</h3>
+        <p class="item-description">Powerful laptop for professionals</p>
+        <div class="price-block">
+            <span class="price" data-discount="100">999</span>
+            <button id="main_button">Purchase</button>
+            <button class="action-button">Add to Wishlist</button>
+            <button class="action-button">Compare</button>
+        </div>
+    </div>
     <script>
-        const superLink = document.getElementById('super_link');
-        console.log(superLink);
-        const cardLinks = document.querySelectorAll('.card-link');
-        cardLinks.forEach(links => {
-            cardLinks.textContent = 'Ссылка'
+
+        const mainBtn = document.getElementById('main_button');
+        mainBtn.textContent = 'Купить сейчас'
+        console.log(mainBtn);
+
+        const actionBtn = document.querySelectorAll('.action-button');
+        actionBtn.forEach(btn => {
+            btn.textContent = btn.textContent + '⭐';
         });
-        console.log(cardLinks);
-        const cardEls = document.querySelectorAll('.card-body .card-link');
-        console.log(cardEls);
-        const dataNumber = document.querySelector('[data-number="50"]');
-        console.log(dataNumber);
-        const titleEl = document.querySelector('title');
-        console.log(titleEl);
-        const cardTitleParrent = document.querySelector('.card-title');
-        console.log(cardTitleParrent.parentNode);
-        const paragraphEl = document.createElement('p');
-        const card = document.querySelector('.card');
-        paragraphEl.textContent = 'Привет';
-        card.insertBefore(paragraphEl, card.firstChild);
-        const h6Tag = document.querySelector('h6');
-        h6Tag.remove();
+        console.log(actionBtn);
+
+        const discount = document.querySelector('[data-discount]');
+        console.log(discount);
+
+        const parentPrice = document.querySelector('.price');
+        console.log(parentPrice.parentNode);
+
+        const span = document.createElement('span');
+        const priceBlock = document.querySelector('.price-block');
+        const mainBtn = document.getElementById('main_button')
+        span.textContent = 'В наличии';
+        span.classList.add('status');
+        priceBlock.insertBefore(span, mainBtn);
+        console.log(span);
+
+        const itemDesc = document.querySelector('.item-description');
+        itemDesc.remove();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // const superLink = document.getElementById('super_link');
+        // console.log(superLink);
+        // const cardLinks = document.querySelectorAll('.card-link');
+        // cardLinks.forEach(links => {
+        //     cardLinks.textContent = 'Ссылка'
+        // });
+        // console.log(cardLinks);
+        // const cardEls = document.querySelectorAll('.card-body .card-link');
+        // console.log(cardEls);
+        // const dataNumber = document.querySelector('[data-number="50"]');
+        // console.log(dataNumber);
+        // const titleEl = document.querySelector('title');
+        // console.log(titleEl);
+        // const cardTitleParrent = document.querySelector('.card-title');
+        // console.log(cardTitleParrent.parentNode);
+        // const paragraphEl = document.createElement('p');
+        // const card = document.querySelector('.card');
+        // paragraphEl.textContent = 'Привет';
+        // card.insertBefore(paragraphEl, card.firstChild);
+        // const h6Tag = document.querySelector('h6');
+        // h6Tag.remove();
     </script>
 </body>
 </html>
