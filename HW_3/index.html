@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p class="super_element">Привет</p>
+    <img src="https://placeimg.com/50/50/animals" alt="">
+    <img src="https://placeimg.com/50/50/arch" alt="">
+    <img src="https://placeimg.com/50/50/nature" alt="">
+    <img src="https://placeimg.com/50/50/people" alt="">
+    <img src="https://placeimg.com/50/50/tech" alt="">
+    <img src="https://placeimg.com/50/50/tech/grayscale" alt="">
+    <img src="https://placeimg.com/50/50/tech/sepia" alt="">
+    <br>
+    <button>Кнопка</button>
+    <button class="super_element">Кнопка с классом btn</button>
+    <button>Кнопка</button>
+    <br>
+    <textarea></textarea>
+    <br>
+    <ul>
+        <li>
+            <button>Кнопка 1</button>
+        </li>
+        <li>
+            <button>Кнопка 2</button>
+        </li>
+        <li>
+            <button>Кнопка 3</button>
+        </li>
+        <li>
+            <button>Кнопка 4</button>
+        </li>
+    </ul>
+    <script>
+        document.addEventListener('DOMContentLoaded', function (e) {
+            console.log('Теги прогрузились');
+        });
+        window.addEventListener('load', function (e) {
+            console.log('Страница полностью прогрузилась');
+        });
+
+        superEls = document.querySelectorAll('.super_element');
+        superEls.forEach(element => {
+            element.addEventListener('click', (e) => {
+            const target = e.target;
+            const tagName = target.tagName.toLowerCase();
+            const hasSuperEls = target.classList.contains('super_element');
+            if (hasSuperEls) {
+                console.log(`Класс "${target.className}" присутствует в элементе div`);
+            }
+            });
+        });
+
+        const textareaEl = document.querySelector('textarea');
+        textareaEl.addEventListener('mouseover', function (e) {
+            console.log('Вы навели на textarea');
+        });
+
+        const ulEl = document.querySelector('ul');
+        ulEl.addEventListener('click', function (e) {
+            const target = e.target;
+            if (target.tagName.toLowerCase() === 'button') {
+                console.log(target.textContent);
+            }
+        });
+
+        const liEls = document.querySelectorAll('li:nth-child(2n)');
+        liEls.forEach(element => {
+            element.style.backgroundColor = '#ccc';
+        });
+    </script>
+</body>
+</html>
