@@ -4,6 +4,119 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .traffic-light {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding: 10px;
+            background: #333;
+            border-radius: 10px;
+            width: fit-content;
+        }
+    
+        .light {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+    
+        .red {
+            background-color: rgb(216, 0, 0);
+        }
+    
+        .yellow {
+            background-color: #daa000;
+        }
+    
+        .green {
+            background-color: rgb(0, 201, 0);
+        }
+
+        .char-counter {
+            max-width: 400px;
+            margin: 20px 0;
+        }
+        
+        .text-input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        
+        .char-limit {
+            margin-top: 5px;
+            color: #666;
+        }
+        
+        .limit-exceeded {
+            border-color: red;
+            outline: none;
+        }
+
+        /* Задание 7: Игра в прятки */
+        .target-element {
+            padding: 20px;
+            background: #f0f0f0;
+            margin: 10px 0;
+            transition: opacity 0.3s ease;
+        }
+        .hidden {
+            opacity: 0;
+        }
+        
+        /* Задание 8: Генератор списка */
+        .list-generator {
+            margin: 20px 0;
+        }
+        .items-list {
+            margin-top: 10px;
+        }
+        .items-list li {
+            cursor: pointer;
+            padding: 5px;
+        }
+        .items-list li:hover {
+            background: #f0f0f0;
+        }
+        
+        /* Задание 9: Переключатель темы */
+        .theme-demo {
+            padding: 20px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+        }
+        .dark-theme {
+            background: #333;
+            color: white;
+        }
+        
+        /* Задание 10: Слайдер */
+        .slider {
+            max-width: 300px;
+            margin: 20px 0;
+        }
+        .slider-container {
+            position: relative;
+            overflow: hidden;
+        }
+        .slide {
+            width: 100%;
+            display: none;
+        }
+        .slide.active {
+            display: block;
+        }
+        .slider-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 10px;
+        }
+    </style>
 </head>
 <body>
     <p class="super_element">Привет</p>
@@ -35,6 +148,208 @@
             <button>Кнопка 4</button>
         </li>
     </ul>
+
+
+    <div class="container">
+        <button class="btn">1</button>
+        <button class="btn">2</button>
+        <button class="btn">3</button>
+    </div>
+
+
+
+
+
+
+
+
+    <ul>
+        <li>
+            Кнопка 1
+            <ul class="submenu">
+                <li>Подпункт 1.1</li>
+                <li>Подпункт 1.2</li>
+            </ul>
+        </li>
+        <li>
+            Кнопка 2
+            <ul class="submenu">
+                <li>Подпункт 2.1</li>
+                <li>Подпункт 2.2</li>
+            </ul>
+        </li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </ul>
+        <!-- Новые задания -->
+        <div class="new-tasks">
+            <!-- Задание 1: Перетаскивание -->
+            <div class="task">
+                <h3>Задание 1</h3>
+                <div class="square" style="width: 100px; height: 100px; background-color: blue;"></div>
+            </div>
+    
+            <!-- Задание 2: Счётчик кликов -->
+            <div class="task">
+                <h3>Задание 2</h3>
+                <button class="btn-counter" style="background-color: red;">Кнопка 1</button>
+                <button class="btn-counter" style="background-color: green;">Кнопка 2</button>
+                <button class="btn-counter" style="background-color: blue;">Кнопка 3</button>
+                <button class="btn-reset">Сбросить всё</button>
+            </div>
+    
+            <!-- Задание 3: Форма ввода -->
+            <div class="task">
+                <h3>Задание 3</h3>
+                <input type="text" class="input-task" placeholder="Введите текст" style="border: 1px solid black; outline: none;">
+                <div class="char-count">Символов: 0</div>
+            </div>
+    
+            <!-- Задание 4: Галерея -->
+            <div class="task">
+                <h3>Задание 4</h3>
+                <div class="gallery">
+                    <img src="https://placeimg.com/200/200/nature" alt="Nature" style="transition: all .3s ease;">
+                    <img src="https://placeimg.com/200/200/arch" alt="Architecture" style="transition: all .3s ease;">
+                    <img src="https://placeimg.com/200/200/tech" alt="Technology" style="transition: all .3s ease;">
+                </div>
+                <button class="btn-reverse">Обратный порядок</button>
+            </div>
+    
+            <!-- Задание 5: Светофор -->
+            <div class="task">
+                <h3>Задание 5</h3>
+                <div class="traffic-light">
+                    <div class="light red"></div>
+                    <div class="light yellow"></div>
+                    <div class="light green"></div>
+                </div>
+                <button class="btn-auto">Авто-режим</button>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- Задание 6: Счётчик символов -->
+        <div class="task">
+            <h3>Задание 6</h3>
+            <div class="char-counter">
+                <textarea 
+                    class="text-input" 
+                    placeholder="Введите текст (максимум 100 символов)"
+                    rows="4"
+                ></textarea>
+                <div class="char-limit">Осталось символов: 100</div>
+            </div>
+        </div>
+        <!-- Задание 7: Игра в прятки -->
+        <div class="task">
+            <h3>Задание 7</h3>
+            <div class="hide-seek">
+                <div class="target-element">Нажми кнопку чтобы спрятать меня!</div>
+                <button class="toggle-btn">Спрятать</button>
+            </div>
+        </div>
+        
+        <!-- Задание 8: Генератор списка -->
+        <div class="task">
+            <h3>Задание 8</h3>
+            <div class="list-generator">
+                <input type="text" class="item-input" placeholder="Введите текст">
+                <button class="add-btn">Добавить</button>
+                <ul class="items-list"></ul>
+            </div>
+        </div>
+        
+        <!-- Задание 9: Переключатель темы -->
+        <div class="task">
+            <h3>Задание 9</h3>
+            <div class="theme-switcher">
+                <button class="theme-btn">Тёмная тема</button>
+                <div class="theme-demo">
+                    Этот текст поменяет цвет при смене темы
+                </div>
+            </div>
+        </div>
+        
+        <!-- Задание 10: Простой слайдер -->
+        <div class="task">
+            <h3>Задание 10</h3>
+            <div class="slider">
+                <div class="slider-container">
+                    <img src="https://picsum.photos/300/200?random=1" alt="Slide 1" class="slide">
+                    <img src="https://picsum.photos/300/200?random=2" alt="Slide 2" class="slide">
+                    <img src="https://picsum.photos/300/200?random=3" alt="Slide 3" class="slide">
+                </div>
+                <div class="slider-controls">
+                    <button class="prev-btn">Назад</button>
+                    <span class="slide-counter">1/3</span>
+                    <button class="next-btn">Вперёд</button>
+                </div>
+            </div>
+        </div>
     <script>
         document.addEventListener('DOMContentLoaded', function (e) {
             console.log('Теги прогрузились');
@@ -43,34 +358,298 @@
             console.log('Страница полностью прогрузилась');
         });
 
-        superEls = document.querySelectorAll('.super_element');
-        superEls.forEach(element => {
-            element.addEventListener('click', (e) => {
+        // superEls = document.querySelectorAll('.super_element');
+        // superEls.forEach(element => {
+        //     element.addEventListener('click', (e) => {
+        //     const target = e.target;
+        //     const tagName = target.tagName.toLowerCase();
+        //     const hasSuperEls = target.classList.contains('super_element');
+        //     if (hasSuperEls) {
+        //         console.log(`Класс "${target.className}" присутствует в элементе div`);
+        //     }
+        //     });
+        // });
+
+        // const textareaEl = document.querySelector('textarea');
+        // textareaEl.addEventListener('mouseover', function (e) {
+        //     console.log('Вы навели на textarea');
+        // });
+
+        // const ulEl = document.querySelector('ul');
+        // ulEl.addEventListener('click', function (e) {
+        //     const target = e.target;
+        //     if (target.tagName.toLowerCase() === 'button') {
+        //         console.log(target.textContent);
+        //     }
+        // });
+
+        // const liEls = document.querySelectorAll('li:nth-child(2n)');
+        // liEls.forEach(element => {
+        //     element.style.backgroundColor = '#ccc';
+        // });
+
+
+
+
+
+
+
+        // const imgEls = document.querySelectorAll('img');
+        // imgEls.forEach(element => {
+        //     element.addEventListener('click', (e) => {
+        //         console.log(e.target.src);
+        //         console.log(`Координаты клика относительно картинки: X = ${e.offsetX}; Y = ${e.offsetY}`);
+        //         console.log(`Координаты клика относительно окна: X = ${e.clientX}; Y = ${e.clientY}`);
+        // });
+
+        // });
+        // const containerEl = document.querySelector('.container');
+        // containerEl.addEventListener('mouseover', function (e) {
+        //     const target = e.target;
+        //     if (target.classList.contains('btn')) {
+        //         target.style.backgroundColor = 'green';
+        //     }
+        // });
+
+        // containerEl.addEventListener('mouseout', function (e) {
+        //     const target = e.target;
+        //     if (target.classList.contains('btn')) {
+        //         target.style.backgroundColor = 'white';
+        //     }
+        // });
+
+        // let count = 0;
+
+        // const textareaEl = document.querySelector('textarea');
+        // textareaEl.addEventListener('keydown', function (e) {
+        //     if(/[0-9]/.test(e.key)) {
+        //         e.preventDefault();
+        //         console.log(`Попыток ввода: ${++count}`);
+        //         console.log('Сюда нельзя вводить цифры');
+        //     }
+        // });
+
+        // const supEls = document.querySelectorAll('.super_element');
+        // supEls.forEach(element => {
+        //     element.addEventListener('click', function (e) {
+        //         console.log(e.type);
+        //     });
+        //     element.addEventListener('dblclick', function (e) {
+        //         const target = e.target;
+        //         console.log(target.classList);
+        //     });
+        //     element.addEventListener('contextmenu', function (e) {
+        //         const target = e.target;
+        //         console.log(`Ширина: ${target.offsetWidth}`);
+        //         console.log(`Высота: ${target.offsetHeight}`);
+        //     });
+        // });
+        
+
+        // const liEls = document.querySelectorAll('li');
+        // const submenus = document.querySelectorAll('.submenu');
+        
+        // submenus.forEach(submenu => {
+        //     submenu.style.display = 'none';
+        // });
+
+        // liEls.forEach(element => {
+        //     element.addEventListener('click', function (e) {
+        //         e.stopPropagation();
+        //         const submenu = this.querySelector('.submenu');
+        //         if (submenu) {
+        //             if (submenu.style.display === 'none') {
+        //                 submenu.style.display = 'block';
+        //             } else {
+        //                 submenu.style.display = 'none';
+        //             }
+        //         }
+        //         console.log(`Информация о целевом элементе: ${e.target.tagName}`);
+        //         console.log(`Информация о текущем элементе: ${e.currentTarget.tagName}`);
+        //     });
+        // });
+
+
+
+
+
+
+        const squareEl = document.querySelector('.square');
+        squareEl.addEventListener('mousedown', function (e) {
             const target = e.target;
-            const tagName = target.tagName.toLowerCase();
-            const hasSuperEls = target.classList.contains('super_element');
-            if (hasSuperEls) {
-                console.log(`Класс "${target.className}" присутствует в элементе div`);
-            }
+            target.style.backgroundColor = 'red';
+        });
+        squareEl.addEventListener('mouseup', function (e) {
+            const target = e.target;
+            target.style.backgroundColor = 'blue';
+        });
+
+        const btnCounter = document.querySelectorAll('.btn-counter');
+        const btnReset = document.querySelector('.btn-reset');
+        const counts = [0, 0, 0];
+        btnCounter.forEach((element, index) => {
+            element.addEventListener('click', function (e) {
+                element.textContent = `Кликов: ${++counts[index]}`;
+                console.log(`Кнопка ${index + 1}: ${counts[index]} кликов`);
+            });
+            element.addEventListener('dblclick', function (e) {
+                counts[index] = 0;
+                element.textContent = `Кликов: ${counts[index]}`;
+            });
+        });
+        btnReset.addEventListener('click', function (e) {
+            btnCounter.forEach((element, index) => {
+                counts[index] = 0;
+                element.textContent = `Кликов: ${counts[index]}`;
             });
         });
 
-        const textareaEl = document.querySelector('textarea');
-        textareaEl.addEventListener('mouseover', function (e) {
-            console.log('Вы навели на textarea');
+        const inputEl = document.querySelector('.input-task');
+        const charCountEl = document.querySelector('.char-count');
+        inputEl.addEventListener('focus', function (e) {
+            e.target.style.border = '1px solid green';
+        });
+        inputEl.addEventListener('blur', function (e) {
+            e.target.style.border = '1px solid black';
+        });
+        inputEl.addEventListener('input', function (e) {
+            charCountEl.textContent = `Символов: ${e.target.value.length}`;
         });
 
-        const ulEl = document.querySelector('ul');
-        ulEl.addEventListener('click', function (e) {
+        const images = document.querySelectorAll('.gallery img');
+        const btnReverse = document.querySelector('.btn-reverse');
+        images.forEach(element => {
+            element.addEventListener('mouseover', function (e) {
+                e.target.style.transform = 'scale(1.2)';
+            });
+            element.addEventListener('mouseout', function (e) {
+                e.target.style.transform = 'scale(1)';
+            });
+            element.addEventListener('click', function (e) {
+                console.log(`${e.target.src}`);
+            });
+        });
+        btnReverse.addEventListener('click', function (e) {
+            const gallery = document.querySelector('.gallery');
+            const imgsArr = Array.from(images);
+            imgsArr.reverse();
+            imgsArr.forEach(img => {
+                gallery.appendChild(img);
+            });
+        });
+
+        const lights = document.querySelectorAll('.light');
+        const btnAuto = document.querySelector('.btn-auto');
+        lights.forEach(light => {
+            light.addEventListener('click', function (e) {
+                e.target.style.filter = 'brightness(1.5)';
+                if(e.target.classList.contains('red')) {
+                    alert('Стоп');
+                }
+                if(e.target.classList.contains('yellow')) {
+                    alert('Внимание');
+                }
+                if(e.target.classList.contains('green')) {
+                    alert('Вперёд');
+                }
+            });
+        });
+        let currentLight = 0;
+        function switchLight() {
+            lights.forEach(light => {
+                light.style.filter = 'brightness(1)';
+            });
+            lights[currentLight].style.filter = 'brightness(1.5)';
+            currentLight = (currentLight + 1) % 3;
+        }
+        btnAuto.addEventListener('click', function () {
+            switchLight();
+        });
+
+
+
+
+
+
+
+
+        const textInputEl = document.querySelector('.text-input');
+        const charLimEl = document.querySelector('.char-limit');
+        const maxLength = 100;
+        textInputEl.addEventListener('input', function (e) {
             const target = e.target;
-            if (target.tagName.toLowerCase() === 'button') {
-                console.log(target.textContent);
+            const remainingChars = maxLength - target.value.length;
+            charLimEl.textContent = `Осталось символов: ${remainingChars}`;
+            if (remainingChars < 0) {
+                textInputEl.classList.add('limit-exceeded');
+                target.value = target.value.slice(0, maxLength);
+                charLimEl.textContent = `Осталось символов: 0`;
+            } else {
+                textInputEl.classList.remove('limit-exceeded');
             }
         });
 
-        const liEls = document.querySelectorAll('li:nth-child(2n)');
-        liEls.forEach(element => {
-            element.style.backgroundColor = '#ccc';
+        const toggleBtn = document.querySelector('.toggle-btn');
+        const targetEl = document.querySelector('.target-element');
+        toggleBtn.addEventListener('click', function (e) {
+            targetEl.classList.toggle('hidden');
+            if (targetEl.classList.contains('hidden')) {
+                toggleBtn.textContent = 'Показать';
+            } else {
+                toggleBtn.textContent = 'Спрятать';
+            }
+        });
+
+        const itemInput = document.querySelector('.item-input');
+        const addBtn = document.querySelector('.add-btn');
+        const ulEl = document.querySelector('.items-list');
+
+        addBtn.addEventListener('click', function (e) {
+            if (itemInput.value !== '') {
+                const liEl = document.createElement('li');
+                liEl.textContent = itemInput.value;
+                ulEl.appendChild(liEl);
+                itemInput.value = '';
+                liEl.addEventListener('click', function (e) {
+                    liEl.remove();
+                });
+            } else {
+                alert('Поле не может быть пустым!');
+            }
+        });
+
+        const themeBtn = document.querySelector('.theme-btn');
+        const themeText = document.querySelector('.theme-demo');
+
+        themeBtn.addEventListener('click', function (e) {
+            themeText.classList.toggle('dark-theme');
+            if(themeText.classList.contains('dark-theme')) {
+                themeBtn.textContent = 'Светлая тема';
+            } else {
+                themeBtn.textContent = 'Тёмная тема';
+            }
+        });
+
+        const slides = document.querySelectorAll('.slide');
+        const prevBtn = document.querySelector('.prev-btn');
+        const nextBtn = document.querySelector('.next-btn');
+        const counter = document.querySelector('.slide-counter');
+
+        let currentSlide = 0;
+        slides[0].classList.add('active');
+
+        nextBtn.addEventListener('click', function (e) {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + 1) % 3;
+            counter.textContent = `${currentSlide + 1}/3`;
+            slides[currentSlide].classList.add('active');
+        });
+
+        prevBtn.addEventListener('click', function (e) {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide - 1 + 3) % 3;
+            counter.textContent = `${currentSlide + 1}/3`;
+            slides[currentSlide].classList.add('active');
         });
     </script>
 </body>

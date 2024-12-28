@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .error {
+      border: 2px solid red;
+      outline: none;
+      /* Убираем стандартное выделение при фокусе */
+    }
+
+    /* Анимация для появления */
+    .animate_animated {
+      animation-duration: 1s;
+      /* Продолжительность анимации */
+      animation-fill-mode: both;
+      /* Держать финальное состояние анимации */
+    }
+
+    @keyframes fadeInLeftBig {
+      0% {
+        opacity: 0;
+        transform: translateX(-1000px);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    .animate_fadeInLeftBig {
+      animation-name: fadeInLeftBig;
+    }
+  </style>
+</head>
+
+<body>
+  <input id="from" type="text">
+  В инпуте написано: <span></span>
+  <br>
+  <button class="messageBtn">Показать блок</button>
+  <div class="message">
+    Привет
+  </div>
+  <br>
+  <form>
+    <label>
+      Первый инпут:
+      <input class="form-control" type="text">
+    </label>
+    <br>
+    <br>
+    <label>
+      Второй инпут:
+      <select class="form-control">
+        <option value=""></option>
+        <option value="1">Один</option>
+        <option value="2">Два</option>
+      </select>
+    </label>
+    <br>
+    <br>
+    <button type="submit">Отправить</button>
+  </form>
+
+  <script>
+    const inputEl = document.getElementById('from')
+    const spanEl = document.querySelector('span');
+
+    inputEl.addEventListener('input', function (e) {
+      if (inputEl.value) {
+        spanEl.textContent = inputEl.value;
+      } else {
+        spanEl.textContent = '';
+      }
+    });
+
+    const messageBtn = document.querySelector('.messageBtn');
+    const messageText = document.querySelector('.message');
+
+    messageBtn.addEventListener('click', function (e) {
+      messageText.classList.remove('animate_animated', 'animate_fadeInLeftBig');
+      messageText.style.visibility = 'hidden';
+      void messageText.offsetWidth;
+      messageText.classList.add('animate_animated', 'animate_fadeInLeftBig');
+      messageText.style.visibility = 'visible';
+    });
+
+    const formEl = document.querySelector('form');
+    const formControls = document.querySelectorAll('.form-control');
+    formEl.addEventListener('submit', function (e) {
+      e.preventDefault();
+      let isValid = true;
+      formControls.forEach(control => {
+        if (!control.value) {
+          isValid = false;
+          control.classList.add('error');
+        }
+      });
+      if (isValid) {
+        formEl.submit();
+      }
+    });
+    formControls.forEach(control => {
+      control.addEventListener('input', function (e) {
+        if (!control.value) {
+          control.classList.add('error');
+        } else {
+          control.classList.remove('error');
+        }
+      });
+    });
+  </script>
+</body>
