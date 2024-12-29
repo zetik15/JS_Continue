@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin: 20px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        img {
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            margin: 0;
+            font-size: 1.5rem;
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #product-list {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .product-li {
+            width: 500px;
+        }
+
+        .product-title {
+            text-align: center;
+        }
+
+        .product-desc {
+            text-align: center;
+        }
+        </style>
+</head>
+<body>
+    
+    <h1>Products List</h1>
+    <ul id="product-list">
+
+    </ul>
+
+    <script src="data.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
