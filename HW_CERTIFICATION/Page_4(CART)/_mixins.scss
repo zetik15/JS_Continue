@@ -1,0 +1,20 @@
+@mixin centerSliderPhoto() {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin centerContentColumn() {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin centerContentRow() {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
